@@ -1,0 +1,5 @@
+<?
+
+class Type extends Eloquent {
+
+}
