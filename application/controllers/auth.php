@@ -59,6 +59,7 @@ class Auth_Controller extends Controller
 		return Redirect::to('/');
 	}
 
+	/*
 	public function action_register()
 	{
 		$user				= new User;
@@ -69,10 +70,11 @@ class Auth_Controller extends Controller
 		
 		return $this->redirect();
 	}
+	*/
 
+	/*
 	public function action_create()
-	{
-		
+	{	
 		$admin				= new User();
 		$admin->email		= 'Admin';
 		$admin->password	= Hash::make('Password');
@@ -82,6 +84,7 @@ class Auth_Controller extends Controller
 
 		return Redirect::to('auth/login');
 	}
+	*/
 
 	function redirect($role)
 	{
