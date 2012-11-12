@@ -1,31 +1,40 @@
 @layout('layouts.public')
 
 @section('main')
-	
-	<h2 class="subheader">{{$client->email}} - {{$app->title}}</h2>
+	<div class="columns twelve">
 
-	<table class="columns twelve">
-		<thead>
-			<tr>
-				<th>Title</th>
-				<th>Version</th>
-				<th>Date</th>
-				<th>Downloads</th>
-			</tr>
-		</thead>
+		<h2 class="subheader">{{$client->email}} - {{$app->title}}</h2>
 
-		<tbody>
-			@foreach($builds as $b)
+		<table class="columns twelve">
+			<thead>
 				<tr>
-					<td>{{$b->title}}</td>
-					<td>{{$b->version}}</td>
-					<td>{{$b->updated_at}}</td>
-					<td>
-						<a href="/builds/{{$b->slug}}" class="button small">View</a>
-					</td>
+					<th>Title</th>
+					<th>Version</th>
+					<th>Date</th>
+					<th>Downloads</th>
 				</tr>
-			@endforeach
-		</tbody>
-	<table>
+			</thead>
+
+			<tbody>
+				@foreach($builds as $b)	
+						<tr>
+							<td>{{$b->title}}</td>
+							<td>{{$b->version}}</td>
+							<td>{{$b->updated_at}}</td>
+							<td>
+								<a href="/builds/{{$b->slug}}" class="button small">View</a>
+							</td>
+						</tr>
+				@endforeach
+
+				@if(!$builds)
+					<tr>
+						<td colspan="4">No Results found.</td>
+					</tr>
+				@endif
+			</tbody>
+		<table>
+
+	</div>
 
 @endsection

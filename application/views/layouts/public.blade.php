@@ -19,6 +19,7 @@
   <![endif]-->
 
   	{{ HTML::style('css/foundation.min.css') }}
+  	{{ HTML::style('css/app.css') }}
 
 	<style type="text/css">
 		@yield('additional_css')
@@ -26,20 +27,30 @@
 </head>
 
 <body>
+	<div id="wrapper">
 
-	<div class="row" role="header" id="header">
-		<h1><a href="/" style="color: inherit;">Release Manager</a></h1>
-	</div>
+		<header class="row" role="header" id="header">
+			<div class="columns twelve">
+				<img src='/img/swanify_logo.jpg' id="header_logo" alt="Swanify" />
+				<h1><a href="/" style="color: inherit;">Release Manager</a></h1>
+			</div>
+		</header>
 
-	<div class="row">
-		
-		@yield('main')
+		<div class="row">
+			
+			@yield('main')
 
-	</div>
+		</div>
 
-	<div class="row">
+		<div class="row">
 
-		
+			
+		</div>
+
+		<footer id="footer">
+			© 2012 Swanify. All Rights Reserved
+		</footer>
+
 	</div>
 
 

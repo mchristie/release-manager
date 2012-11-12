@@ -204,7 +204,7 @@ class Admin_Controller extends Controller {
 				'build' => $build
 			));
 		} else {
-			$builds = Build::order_by('updated_at', 'desc')->get();
+			$builds = Build::with ('app')->order_by('updated_at', 'desc')->get();
 			
 			return View::make('admin.builds')->with(array(
 				'type' => 'builds',

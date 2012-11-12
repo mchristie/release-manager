@@ -9,7 +9,7 @@
 		@foreach($apps as $app)
 
 			<div class="column four end" onclick="window.location.href= '/admin/builds/new/{{$app->id}}'">
-				<div class="panel">
+				<div class="panel app_pannel">
 				<h5>{{$app->title}}</h5>
 				<p>Create a new build for {{$app->title}}.</p>
 				</div>

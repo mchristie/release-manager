@@ -7,22 +7,22 @@
 	<table class="columns twelve">
 		<thead>
 			<tr>
-				<th>ID</th>
+				<th>App</th>
 				<th>Title</th>
 				<th>Version</th>
-				<th>Date</th>
-				<th>Options</th>
+				<th style="width:130px;">Date</th>
+				<th style="width:210px;">Options</th>
 			</tr>
 		</thead>
 
 		<tbody>
 			@foreach($builds as $b)
 				<tr>
-					<td>{{$b->id}}</td>
+					<td>{{$b->app->title}}</td>
 					<td>{{$b->title}}</td>
 					<td>{{$b->version}}</td>
-					<td>{{$b->updated_at}}</td>
-					<td>
+					<td style="width:130px;"><?php $date = strtotime($b->updated_at); echo date('d/M/Y H:i', $date); ?></td>
+					<td style="width:210px;">
 						<a href="/admin/upload/{{$b->id}}" class="button small">Upload</a>
 						<a href="/admin/builds/{{$b->id}}/{{$b->app_id}}" class="button small">Edit</a>
 						<a href="/builds/{{$b->slug}}" class="button small">View</a>
@@ -30,7 +30,7 @@
 				</tr>
 			@endforeach
 		</tbody>
-	<table>
+	</table>
 		
 	<p>Create a new build from homepage.</p>
 

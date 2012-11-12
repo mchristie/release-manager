@@ -27,49 +27,57 @@
 </head>
 
 <body>
+	<div id="wrapper">
 
-	<div class="row" role="header" id="header">
-		<div class="columns twelve">
-			<h1>Release Manager - Admin</h1>
+		<header class="row" role="header" id="header">
+			<div class="columns twelve">
+				<img src='/img/swanify_logo.jpg' id="header_logo" alt="Swanify" />
+				<h1>Release Manager</h1>
+			</div>
+		</header>
+
+		<div class="row">
+
+			<div class="columns two">
+				<ul class="nav-bar vertical">
+					<li @if(URI::segment(2) == '')class="active"@endif>
+						<a href="/admin">Home</a>
+					</li>
+					<!--
+					<li @if(URI::segment(2) == 'upload')class="active"@endif>
+						<a href="/admin/upload">Upload</a>
+					</li>
+					-->
+					<li @if(URI::segment(2) == 'builds')class="active"@endif>
+						<a href="/admin/builds">Builds</a>
+					</li>
+					<li @if(URI::segment(2) == 'apps')class="active"@endif>
+						<a href="/admin/apps">Apps</a>
+					</li>
+					<li @if(URI::segment(2) == 'clients')class="active"@endif>
+						<a href="/admin/clients">Clients</a>
+					</li>
+					<li @if(URI::segment(2) == 'types')class="active"@endif>
+						<a href="/admin/types">Types</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="columns ten">
+				@yield('main')
+			</div>
+
 		</div>
-	</div>
 
-	<div class="row">
+		<div class="row">
 
-		<div class="columns two">
-			<ul class="nav-bar vertical">
-				<li @if(URI::segment(2) == '')class="active"@endif>
-					<a href="/admin">Home</a>
-				</li>
-				<!--
-				<li @if(URI::segment(2) == 'upload')class="active"@endif>
-					<a href="/admin/upload">Upload</a>
-				</li>
-				-->
-				<li @if(URI::segment(2) == 'builds')class="active"@endif>
-					<a href="/admin/builds">Builds</a>
-				</li>
-				<li @if(URI::segment(2) == 'apps')class="active"@endif>
-					<a href="/admin/apps">Apps</a>
-				</li>
-				<li @if(URI::segment(2) == 'clients')class="active"@endif>
-					<a href="/admin/clients">Clients</a>
-				</li>
-				<li @if(URI::segment(2) == 'types')class="active"@endif>
-					<a href="/admin/types">Types</a>
-				</li>
-			</ul>
-		</div>
-		
-		<div class="columns ten">
-			@yield('main')
+			
 		</div>
 
-	</div>
+		<footer id="footer">
+			© 2012 Swanify. All Rights Reserved
+		</footer>
 
-	<div class="row">
-
-		
 	</div>
 
 	{{ HTML::script('js/jquery.js') }}
@@ -79,5 +87,6 @@
 	{{ HTML::script('js/jquery.filedrop.js') }}
 
 	@yield('additional_js')
+
 </body>
 </html>

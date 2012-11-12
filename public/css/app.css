@@ -20,10 +20,17 @@
 	vertical-align: middle;
 }
 
+div.progress .meter {
+	background:#1b5faf;
+}
+
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */
 
+div["onclick"] {
+	cursor:pointer;
+}
 
 
 
@@ -32,3 +39,101 @@
 ----------------------------------------- */
 
 
+
+body {
+	background:#dfdfdf;
+}
+
+#wrapper {
+	background:#fff;
+	position:relative;
+	width:960px;
+	margin:15px auto;
+	border-radius:20px;
+	border:1px solid #9f9f9f;
+}
+
+#header {
+	padding:15px 0 0 0;
+	margin-bottom:20px;
+}
+
+#header h1 {
+	font-size:30px;
+	line-height:50px;
+	margin:21px 0 0 0;
+	padding:0 5px;
+	float:left;
+	color:#363636;
+}
+
+#header img#header_logo {
+	width:100px;
+	height:100px;
+	float:left;
+}
+
+#footer {
+	text-align:center;
+	padding:30px 0 16px 0;
+	color:#888;
+}
+
+/* Nav Bar */
+.nav-bar.vertical {
+ margin-top:41px;
+ border-radius:10px;
+}
+
+.nav-bar.vertical li:first-child {
+border-radius:10px 10px 0 0;
+}
+
+.nav-bar.vertical li:last-child {
+border-radius:0 0 10px 10px;
+}
+
+.nav-bar.vertical > li.active {
+	background: #1b5faf;
+}
+
+
+/* Login Form */
+
+#login_form {
+	width:500px;
+	margin:0 auto;
+	position:relative;
+}
+
+/* UI Styles */
+
+.button {
+	background-color:#1b5faf;
+	border-radius:3px;
+}
+
+.button:hover, .button:focus {
+	background-color:#154d8f;
+}
+
+.panel {
+	border-radius:10px;
+}
+
+.app_pannel {
+	height:150px;
+	cursor:pointer;
+}
+
+/* Other */
+
+.columns.ten h2 {
+	margin:0 0 10px 0;
+	font-size:20px;
+	line-height:30px;
+}
+
+table.columns.twelve {
+	padding:0;
+}

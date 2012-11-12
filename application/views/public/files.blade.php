@@ -2,6 +2,7 @@
 
 @section('main')
 	
+	<div class="columns twelve">
 	<h2 class="subheader">{{$app->title}}</h2>
 
 	<blockquote>
@@ -17,10 +18,11 @@
 					
 					<img src="//chart.googleapis.com/chart?chs=200x200&cht=qr&chl={{urlencode($file->path())}}" width="200" height="200" alt="" />
 
-					<p><a href="{{$file->path()}}">{{$file->filename}}</a></p>
+					<p style="text-align:center;"><a href="{{$file->path()}}">{{$file->filename}}</a></p>
 				</div>
 			</div>
 		@endforeach
 	</div>
+</div>
 
 @endsection

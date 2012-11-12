@@ -19,12 +19,12 @@
 				<tr>
 					<td>{{$l->id}}</td>
 					<td>{{$l->title}}</td>
-					<td>{{$l->updated_at}}</td>
+					<td><?php $date = strtotime($l->updated_at); echo date('d/M/Y H:i', $date); ?></td>
 					<td><a href="/admin/{{$type}}/{{$l->id}}" class="button small">Edit</a></td>
 				</tr>
 			@endforeach
 		</tbody>
-	<table>
+	</table>
 
 	<p><a href="/admin/{{$title}}/new" class="button medium">New {{$title}}</a></p>
 

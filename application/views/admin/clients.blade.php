@@ -29,7 +29,7 @@
 				</tr>
 			@endforeach
 		</tbody>
-	<table>
+	</table>
 
 	<p><a href="/admin/clients/new" class="button medium">New Client</a></p>
 

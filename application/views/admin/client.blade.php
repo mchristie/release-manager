@@ -2,7 +2,7 @@
 
 @section('main')
 	
-	<h2>{{$client->name}}</h2>
+	<h2>{{$client->email}}</h2>
 
 	<form method="post" action="/admin/clients/{{$client->id}}">
 
@@ -10,7 +10,7 @@
 			<span class="column two bold">
 				<label class="right inline">Role:</label>
 			</span>
-			<span class="column ten">
+			<span class="column ten" style="line-height:28px;">
 				<select name="role">
 					<option value="admin"@if($client->role == 'admin')selected@endif>Admin</option>
 					<option value="client"@if($client->role == 'client')selected@endif>Client</option>

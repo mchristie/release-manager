@@ -1,7 +1,7 @@
 @layout('layouts.public')
 
 @section('main')
-	
+	<div id="login_form">
 	<h2 class="subheader">Login</h2>
 
 	@if($error)
@@ -12,10 +12,10 @@
 
 		<div class="row">
 			<div class="one columns">
-				<label class="right inline">Email:</label>
+				<label class="right inline">Username:</label>
 			</div>
 			<div class="ten columns">
-				<input type="text" name="email" placeholder="Email address" class="eight" /> 
+				<input type="text" name="email" placeholder="Username" class="eight" /> 
 			</div>
 		</div>
 
@@ -34,7 +34,7 @@
 			</div>
 			<div class="ten columns">
 				<label class="left inline">Remember me:</label>
-				<span><input type="checkbox" name="remember_me" value="1" class="one" /> </span>
+				<span style="line-height:28px;"><input type="checkbox" name="remember_me" value="1" class="one" /> </span>
 			</div>
 		</div>
 
@@ -49,5 +49,6 @@
 		</div>
 
 	</form>
+</div>
 
 @endsection

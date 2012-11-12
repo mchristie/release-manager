@@ -10,7 +10,7 @@
 			<span class="column two bold">
 				<label class="right inline">Client:</label>
 			</span>
-			<span class="column ten">
+			<span class="column ten" style="line-height:28px;">
 				<select name="user_id">
 					@foreach($clients as $c)
 						<option value="{{$c->id}}" @if($c->id == $app->user_id)selected@endif>{{$c->email}}</option>
